@@ -11,6 +11,16 @@ namespace WvsGame.Maple.Events.Implementation
 {
     class ShipOssyria : Event
     {
+        private OssyriaBoatDirection Direction = OssyriaBoatDirection.NotSet;
+
+        private const int EntryTime = 5; // Note: Time to accept entries.
+        private const int BoardTime = 1; // NOTE: Time until take off.
+        private const int FlightTime = 15; // NOTE: Time for each direction.
+        private const int InvasionTime = 1; // NOTE: Time to spawn Balrogs.
+
+        private const int Balrog = 8150000;
+        private const byte BalrogAmount = 2;
+
         public override string Name
         {
             get { return "ShipOssyria"; }
@@ -21,74 +31,57 @@ namespace WvsGame.Maple.Events.Implementation
             get { return true; }
         }
 
-        #region Constants
-
-        private BoatDirection Direction = BoatDirection.NotSet;
-
-        private const int EntryTime =           5; // Note: Time to accept entries.
-        private const int BoardTime =           1; // NOTE: Time until take off.
-        private const int FlightTime =          15; // NOTE: Time for each direction.
-        private const int InvasionTime =        1; // NOTE: Time to spawn Balrogs.
-
-        private const int Balrog =              8150000;
-        private const byte BalrogAmount =       2;
-
-        private int[,] Fields = new int[,]
-        {
-            {101000300, 101000301, 200090010, 200090011}, // NOTE: Station, Board, Flight, Cabin.
-            {200000100, 200000112, 200090000, 200090001} // NOTE: Station, Board, Flight, Cabin.
-        };
-
-        #endregion
-
         public override void Initiate()
         {
+            this.AddField("ElliniaStation", 101000300);
+            this.AddField("ElliniaBoard", 101000301);
+            this.AddField("ElliniaFlight", 200090010);
+            this.AddField("ElliniaCabin", 200090011);
+
+            this.AddField("OrbisStation", 200000100);
+            this.AddField("OrbisBoard", 200000112);
+            this.AddField("OrbisFlight", 200090000);
+            this.AddField("OrbisCabin", 200090001);
+
             this.Schedule();
         }
 
         private void Schedule()
         {
-            this.Set("Board", true);
-            this.Set("Odocked", false);
+            this.Set("Boarding", true);
+            this.Set("Docking", false);
             this.Set("Flying", false);
+            this.Set("Invasion", false);
 
             this.SwitchDirection();
 
-            Delay.Execute(EntryTime * 60 * 1000, () =>
-            {
-                this.CloseEntry();
-            });
+            this.Register(CloseEntry, EntryTime * 60 * 1000);
         }
 
         private void CloseEntry()
         {
-            this.Set("Board", false);
-            this.Set("Odocked", true);
+            this.Set("Boarding", false);
+            this.Set("Docking", true);
 
-            Delay.Execute(BoardTime * 60 * 1000, () =>
-            {
-                this.Takeoff();
-            });
+            this.Register(Takeoff, BoardTime * 60 * 1000);
         }
 
         private void Takeoff()
         {
-            this.Set("Odocked", false);
+            this.Set("Docking", false);
             this.Set("Flying", true);
 
-            this.GetField(this.Direction == BoatDirection.Orbis ? Fields[0, 0] : Fields[1, 0]).HasShip = false;
-            this.GetField(this.Direction == BoatDirection.Orbis ? Fields[0, 0] : Fields[1, 0]).ShowEffect(FieldEffect.ShipLeave);
-            this.Warp(this.Direction == BoatDirection.Orbis ? Fields[0, 1] : Fields[1, 1], this.Direction == BoatDirection.Orbis ? Fields[0, 2] : Fields[1, 2]);
-
-            Delay.Execute(FlightTime * 60 * 1000, () =>
+            if (this.Direction == OssyriaBoatDirection.Orbis)
             {
-                this.Arrive();
-            });
-
-            Delay.Execute(InvasionTime * 60 * 1000, () =>
+                this.Warp("ElliniaBoard", "ElliniaFlight");
+            }
+            else
             {
-                this.Invasion();
-            });
+                this.Warp("OrbisBoard", "OrbisFlight");
+            }
+
+            this.Register(Arrive, FlightTime * 60 * 1000);
+            this.Register(Invasion, InvasionTime * 60 * 1000);
         }
 
         private void Invasion()
@@ -96,16 +89,21 @@ namespace WvsGame.Maple.Events.Implementation
             if (Randomizer.Next(0, 10) <= 5)
             {
                 this.Set("Invasion", true);
-                this.Spawn(this.Direction == BoatDirection.Orbis ? Fields[0, 2] : Fields[1, 2], Balrog, BalrogAmount, this.Direction == BoatDirection.Orbis ? new Fields.Position(483, -221) : new Fields.Position(-590, -221));
-
-                // TODO: Change BGM to 'Bgm04/ArabPirate' & Send the boat effect.
             }
         }
 
         private void Arrive()
         {
-            this.Warp(this.Direction == BoatDirection.Orbis ? Fields[0, 2] : Fields[1, 2], this.Direction == BoatDirection.Orbis ? Fields[1, 0] : Fields[0, 0]);
-            this.Warp(this.Direction == BoatDirection.Orbis ? Fields[0,3 ] : Fields[1, 3], this.Direction == BoatDirection.Orbis ? Fields[1, 0] : Fields[0, 0]);
+            if (this.Direction == OssyriaBoatDirection.Orbis)
+            {
+                this.Warp("ElliniaFlight", "OrbisStation");
+                this.Warp("ElliniaCabin", "OrbisStation");
+            }
+            else
+            {
+                this.Warp("OrbisFlight", "ElliniaStation");
+                this.Warp("OrbisCabin", "ElliniaStation");
+            }
 
             this.Schedule();
         }
@@ -114,25 +112,19 @@ namespace WvsGame.Maple.Events.Implementation
         {
             switch (this.Direction)
             {
-                case BoatDirection.NotSet:
+                case OssyriaBoatDirection.NotSet:
                     this.Set("Direction", "Orbis");
-                    this.Direction = BoatDirection.Orbis;
-                    this.GetField(Fields[0, 0]).HasShip = true;
-                    this.GetField(Fields[0, 0]).ShowEffect(FieldEffect.ShipArrive);
+                    this.Direction = OssyriaBoatDirection.Orbis;
                     break;
 
-                case BoatDirection.Orbis:
+                case OssyriaBoatDirection.Orbis:
                     this.Set("Direction", "Ellinia");
-                    this.Direction = BoatDirection.Ellinia;
-                    this.GetField(Fields[1, 0]).HasShip = true;
-                    this.GetField(Fields[1, 0]).ShowEffect(FieldEffect.ShipArrive);
+                    this.Direction = OssyriaBoatDirection.Ellinia;
                     break;
 
-                case BoatDirection.Ellinia:
+                case OssyriaBoatDirection.Ellinia:
                     this.Set("Direction", "Orbis");
-                    this.Direction = BoatDirection.Orbis;
-                    this.GetField(Fields[0, 0]).HasShip = true;
-                    this.GetField(Fields[0, 0]).ShowEffect(FieldEffect.ShipArrive);
+                    this.Direction = OssyriaBoatDirection.Orbis;
                     break;
             }
         }
@@ -141,7 +133,7 @@ namespace WvsGame.Maple.Events.Implementation
         public override void Initiate(Characters.Character participant) { }
     }
 
-    internal enum BoatDirection : byte
+    internal enum OssyriaBoatDirection : byte
     {
         NotSet,
         Ellinia,

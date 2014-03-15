@@ -173,11 +173,18 @@ namespace WvsGame.Maple.Life
         {
             if (GameServer.Scripts[ScriptType.Npc].ContainsKey(this.Label))
             {
-                this.Controller.NpcSession = (NpcScript)Activator.CreateInstance(GameServer.Scripts[ScriptType.Npc][this.Label]);
-                this.Controller.LastNpc = this;
+                try
+                {
+                    this.Controller.NpcSession = (NpcScript)Activator.CreateInstance(GameServer.Scripts[ScriptType.Npc][this.Label]);
+                    this.Controller.LastNpc = this;
 
-                this.Controller.NpcSession.Initiate(this.MapleID, this.Controller);
-                this.Controller.NpcSession.Run();
+                    this.Controller.NpcSession.Initiate(this.MapleID, this.Controller);
+                    this.Controller.NpcSession.Run();
+                }
+                catch (Exception e)
+                {
+                    MainForm.Instance.Log("Character '{0}' failed to converse with Npc '{1}':\r\n {2}", this.Controller.Name, this.Label, e.ToString());
+                }
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using Common.Net;
+using Common.Threading;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,10 @@ namespace WvsGame.Maple.Events
         public abstract string Name { get; }
         public abstract bool IsBackground { get; }
 
+        public Dictionary<string, Field> Fields {get; set;}
+
         public abstract void Initiate();
+
         public abstract void Initiate(Character participant);
 
         public object Get(string key)
@@ -49,30 +53,43 @@ namespace WvsGame.Maple.Events
             }
         }
 
-        public Field GetField(int fieldId)
+        public void Register(Action method, int delay)
         {
-            return MapleData.CachedFields[fieldId];
+            Delay.Execute(delay, () => {
+                method();
+            });
         }
 
-        public void Spawn(int fieldId, int mapleId, int amount, Position position)
+        public void AddField(string label, int fieldId)
         {
-            for (int i = 0; i < amount; i++)
+            if (this.Fields.ContainsKey(label))
             {
-                MapleData.CachedFields[fieldId].Mobs.Add(new Mob(mapleId)
-                {
-                    Position = position
-                });
+                return;
             }
+
+            this.Fields.Add(label, MapleData.CachedFields[fieldId]);
         }
 
-        public void Warp(int fieldId, int destinationId)
+        public void RemoveField(string label)
         {
-            Field field = MapleData.CachedFields[fieldId];
+            if (!this.Fields.ContainsKey(label))
+            {
+                return;
+            }
+
+            this.Fields.Remove(label);
+        }
+
+        public void Warp(string labelFrom, string labelTo)
+        {
+            Field fieldFrom = this.Fields[labelFrom];
+            Field fieldTo = this.Fields[labelTo];
+
             List<Character> toWarp = new List<Character>();
 
-            lock (field.Characters)
+            lock (fieldFrom.Characters)
             {
-                foreach (Character character in field.Characters)
+                foreach (Character character in fieldFrom.Characters)
                 {
                     toWarp.Add(character);
                 }
@@ -80,8 +97,13 @@ namespace WvsGame.Maple.Events
 
             foreach (Character character in toWarp)
             {
-                character.SetField(destinationId);
+                character.SetField(fieldTo.MapleID);
             }
+        }
+
+        public void SetMusic(string label)
+        {
+
         }
 
         public void Broadcast(int fieldId, Packet outPacket)

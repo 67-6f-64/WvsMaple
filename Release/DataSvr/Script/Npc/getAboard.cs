@@ -40,7 +40,5 @@ class getAboard : NpcScript
  
             await SendNext();
         }
- 
-        Stop();
-    }
+     }
 }

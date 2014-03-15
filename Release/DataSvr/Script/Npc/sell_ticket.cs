@@ -51,7 +51,5 @@ class sell_ticket : NpcScript
                 await SendNext();
             }
         }
-
-        Stop();
     }
 }

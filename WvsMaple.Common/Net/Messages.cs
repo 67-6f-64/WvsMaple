@@ -16,6 +16,7 @@ namespace Common.Net
         CheckDuplicatedID =         0x0D,
         CreateNewCharacter =        0x0E,
         Hash =                      0x12,
+        LogOut =                    0x14,
 
         SetField =                  0x17,
         CharacterMovement =         0x1A,

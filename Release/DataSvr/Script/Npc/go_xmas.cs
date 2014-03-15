@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using WvsGame.Maple.Scripting;
 
 class go_xmas : NpcScript

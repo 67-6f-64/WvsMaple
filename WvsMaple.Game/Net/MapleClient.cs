@@ -41,6 +41,9 @@ namespace WvsGame.Net
                 {
                     switch ((ClientMessages)pPacket.OperationCode)
                     {
+                        case ClientMessages.Hash:
+                            break;
+
                         case ClientMessages.SetField:
                             this.Character.SetField(pPacket);
                             break;

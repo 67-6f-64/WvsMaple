@@ -1,6 +1,17 @@
 using System.Threading.Tasks;
 using WvsGame.Maple.Scripting;
 
+/*
+ * Name: Ticket Usher.
+ * Location: Ellinia Station (101000300),
+ *           Orbis Station (10135235253),
+ *           Ludibrium Station (133333337).
+ *              
+ * Purpose: Lets you on board if you posses a boarding ticket.
+ * 
+ * Author: Fraysa.
+ */   
+
 class get_ticket : NpcScript
 {
     public override async Task Run()
@@ -14,7 +25,7 @@ class get_ticket : NpcScript
             AddText("It looks like there's a problem with the boat to Orbis.");
             await SendOk();
         }
-        else if (evt.Get("Board").Equals(true))
+        else if (evt.Get("Boarding").Equals(true))
         {
             AddText("This will not be a short flight, so if you need to take care of some things, I suggest you do that first before getting on board. ");
             AddText("Do you still wish to board the ship?");
@@ -41,7 +52,7 @@ class get_ticket : NpcScript
                 await SendNext();
             }
         }
-        else if (evt.Get("Odocked").Equals(true))
+        else if (evt.Get("Docking").Equals(true))
         {
             AddText("The ship is getting ready for takeoff. ");
             AddText("I'm sorry, but you'll have to get on the next ride. ");

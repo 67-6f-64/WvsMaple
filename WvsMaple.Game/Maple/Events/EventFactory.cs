@@ -23,8 +23,10 @@ namespace WvsGame.Maple.Events
                 {
                     Event evt = (Event)Activator.CreateInstance(type);
 
-                    Events.Add(evt);
+                    evt.Fields = new Dictionary<string, Fields.Field>();
                     Properties.Add(evt.Name, new Dictionary<string, object>());
+
+                    Events.Add(evt);
 
                     if (evt.IsBackground)
                     {

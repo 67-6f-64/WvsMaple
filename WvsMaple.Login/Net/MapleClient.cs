@@ -36,6 +36,9 @@ namespace WvsLogin.Net
                 {
                     switch ((ClientMessages)pPacket.OperationCode)
                     {
+                        case ClientMessages.Hash:
+                            break;
+
                         case ClientMessages.WorldListRequest:
                             this.OnServerListRequest();
                             break;

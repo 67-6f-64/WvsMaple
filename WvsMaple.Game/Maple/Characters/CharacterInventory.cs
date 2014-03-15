@@ -336,7 +336,7 @@ namespace WvsGame.Maple.Characters
 
             if (item.Assigned)
             {
-                this.Delete(item);
+                item.Delete();
             }
 
             item.Parent = null;
@@ -409,12 +409,6 @@ namespace WvsGame.Maple.Characters
                     this.Parent.Release();
                 }
             }
-        }
-
-        public void Delete(Item item)
-        {
-            GameServer.Database.Delete("items", "ID = '{0}'", item.MapleID);
-            item.Assigned = false;
         }
 
         public void NotifyFull()

@@ -72,11 +72,16 @@
     <Compile Include="Maple\Commands\Command.cs" />
     <Compile Include="Maple\Commands\CommandFactory.cs" />
     <Compile Include="Maple\Commands\CommandCollection.cs" />
+    <Compile Include="Maple\Commands\Implementation\BringCommand.cs" />
     <Compile Include="Maple\Commands\Implementation\ItemCommand.cs" />
     <Compile Include="Maple\Commands\Implementation\MapCommand.cs" />
+    <Compile Include="Maple\Commands\Implementation\MesoCommand.cs" />
+    <Compile Include="Maple\Commands\Implementation\OnlineCommand.cs" />
     <Compile Include="Maple\Commands\Implementation\PacketCommand.cs" />
     <Compile Include="Maple\Commands\Implementation\PositionCommand.cs" />
+    <Compile Include="Maple\Commands\Implementation\ReleaseCommand.cs" />
     <Compile Include="Maple\Commands\Implementation\SaveCommand.cs" />
+    <Compile Include="Maple\Commands\Implementation\WarpCommand.cs" />
     <Compile Include="Maple\Data\CachedFields.cs" />
     <Compile Include="Maple\Data\CachedItems.cs" />
     <Compile Include="Maple\Data\CachedMobs.cs" />
@@ -89,6 +94,7 @@
     <Compile Include="Maple\Events\Event.cs" />
     <Compile Include="Maple\Events\EventFactory.cs" />
     <Compile Include="Maple\Events\EventCollection.cs" />
+    <Compile Include="Maple\Events\Implementation\ShipLudibrium.cs" />
     <Compile Include="Maple\Events\Implementation\ShipOssyria.cs" />
     <Compile Include="Maple\Fields\Drop.cs" />
     <Compile Include="Maple\Fields\Field.cs" />

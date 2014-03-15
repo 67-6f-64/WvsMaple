@@ -277,10 +277,10 @@ namespace WvsGame.Maple
                 query.AppendFormat("'{0}', ", this.MaxLevel);
                 query.AppendFormat("'{0}')", this.CooldownEnd);
 
-                this.ID = GameServer.Database.Fetch("skills", "ID", "CharacterID = '{0}' && MapleID = '{1}'", this.Character.ID, this.MapleID);
-
                 this.Assigned = true;
             }
+
+            this.ID = GameServer.Database.Fetch("skills", "ID", "CharacterID = '{0}' && MapleID = '{1}'", this.Character.ID, this.MapleID);
 
             GameServer.Database.RunQuery(query.ToString());
         }

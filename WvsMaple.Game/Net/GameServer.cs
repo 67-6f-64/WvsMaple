@@ -134,6 +134,19 @@ namespace WvsGame.Net
             return Characters.ContainsKey(id) ? Characters[id] : null;
         }
 
+        public static Character GetCharacter(string name)
+        {
+            foreach (KeyValuePair<int, Character> character in GameServer.Characters)
+            {
+                if (character.Value.Name.ToLower().Equals(name.ToLower()))
+                {
+                    return character.Value;
+                }
+            }
+
+            return null;
+        }
+
         private static void ConnectCenter()
         {
             Center = new CenterServer(CenterIP.ToString(), CenterPort);

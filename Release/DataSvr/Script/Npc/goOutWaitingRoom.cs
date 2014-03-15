@@ -17,7 +17,5 @@ class goOutWaitingRoom : NpcScript
             AddText("You'll get to your destination in a few. Go ahead and talk to other people, and before you know it, you'll be there already.");
             await SendNext();
         }
-
-        Stop();
     }
 }

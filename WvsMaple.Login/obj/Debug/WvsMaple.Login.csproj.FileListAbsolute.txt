@@ -7,3 +7,6 @@ C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\D
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsMaple.Login.csproj.GenerateResource.Cache
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.exe
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.pdb
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\WvsLogin.exe.config
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.exe
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.pdb

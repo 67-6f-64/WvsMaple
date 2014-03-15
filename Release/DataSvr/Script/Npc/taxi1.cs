@@ -3,7 +3,7 @@ using WvsGame.Maple.Scripting;
 
 /*
  * Name: Regular Cab.
- * Location: Victoria Island: Henesys (100000000).
+ * Location: Victoria Island: Perion (102000000).
  * 
  * Purpose: Teleportation service to various towns in Victoria Island.
  * 
@@ -16,23 +16,23 @@ class taxi1 : NpcScript
     {
         int[] fields = new int[]{
             104000000,
-            102000000,
             101000000,
-            103000000
+            103000000,
+            100000000
         };
 
         int[] prices = new int[] {
+            1200,
+            1000,
             800,
-            1000,
-            1000,
-            1200
+            1000
         };
 
         string[] choices = new string[] { 
-            GenerateChoice(104000000, 800),
-            GenerateChoice(102000000, 1000),
+            GenerateChoice(104000000, 1200),
             GenerateChoice(101000000, 1000),
-            GenerateChoice(103000000, 1200)
+            GenerateChoice(103000000, 800),
+            GenerateChoice(100000000, 1000)
         };
 
         AddText("Hi! I drive the " + NpcRef(1022001) + ". ");

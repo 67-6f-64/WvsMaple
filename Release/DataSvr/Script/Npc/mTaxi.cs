@@ -1,4 +1,4 @@
-﻿using Common;
+using Common;
 using Common.Net;
 using System;
 using System.Collections.Generic;
@@ -72,7 +72,7 @@ namespace WvsGame.Maple.Scripting
             }
 
             return await this.Response.Task;
-       }
+        }
 
         public async Task<bool> SendNext()
         {
@@ -88,32 +88,24 @@ namespace WvsGame.Maple.Scripting
             return await this.Response.Task;
         }
 
-        public async Task<bool> SendPrev()
+        public void SendPrev()
         {
-            this.Response = new TaskCompletionSource<bool>();
-
             using (Packet outPacket = this.GetInternalPacket(DialogType.Normal))
             {
                 outPacket.WriteBytes(1, 0);
 
                 this.Talker.Client.Send(outPacket);
             }
-
-            return await this.Response.Task;
         }
 
-        public async Task<bool> SendNextPrev()
+        public void SendNextPrev()
         {
-            this.Response = new TaskCompletionSource<bool>();
-
             using (Packet outPacket = this.GetInternalPacket(DialogType.Normal))
             {
                 outPacket.WriteBytes(1, 1);
 
                 this.Talker.Client.Send(outPacket);
             }
-
-            return await this.Response.Task;
         }
 
         public async Task<bool> SendYesNo()
@@ -169,11 +161,6 @@ namespace WvsGame.Maple.Scripting
             return EventFactory.Events.Contains(name) ? EventFactory.Events[name] : null;
         }
 
-        public Field GetField()
-        {
-            return this.Talker.Field;
-        }
-
         public void SetField(int fieldId, byte portalId = 0)
         {
             this.Talker.SetField(fieldId, portalId);
@@ -194,43 +181,15 @@ namespace WvsGame.Maple.Scripting
             return this.Talker.Statistics.Job;
         }
 
-        public short GetStrength()
-        {
-            return this.Talker.Statistics.Strength;
-        }
-
-        public short GetDexterity()
-        {
-            return this.Talker.Statistics.Dexterity;
-        }
-
-        public short GetIntelligence()
-        {
-            return this.Talker.Statistics.Intelligence;
-        }
-
-        public short GetLuck()
-        {
-            return this.Talker.Statistics.Luck;
-        }
-
         public bool GainMeso(int amount)
         {
-            if (amount < 0)
+            if (this.Talker.Meso >= amount)
             {
-                if (Talker.Meso >= amount)
-                {
-                    Talker.Meso -= amount;
-                    return true;
-                }
-
-                return false;
-            }
-            else
-            {
-                this.Talker.Meso += amount;
+                this.Talker.Meso -= amount;
                 return true;
             }
+
+            return false;
         }
 
         public bool GainItem(int mapleId, int quantity = 1)
@@ -277,55 +236,6 @@ namespace WvsGame.Maple.Scripting
         {
             return this.Talker.Quests.Completed.ContainsKey(id);
         }
-
-        #region References
-
-        public string Blue(string text)
-        {
-            return "#b" + text + "#k";
-        }
-
-        public string Red(string text)
-        {
-            return "#r" + text + "#k";
-        }
-
-        public string Green(string text)
-        {
-            return "#g" + text + "#k";
-        }
-
-        public string FileRef(string text)
-        {
-            return "#f" + text + "#";
-        }
-
-        public string ItemIcon(int itemId)
-        {
-            return "#v" + itemId + "#";
-        }
-
-        public string MobRef(int mobId)
-        {
-            return "#o" + mobId + "#";
-        }
-
-        public string MapRef(int mapId)
-        {
-            return "#m" + mapId + "#";
-        }
-
-        public string PlayerRef()
-        {
-            return "#h #";
-        }
-
-        public string NpcRef(int npcId)
-        {
-            return "#p" + npcId + "#";
-        }
-
-        #endregion
 
         private Packet GetInternalPacket(DialogType type, bool addText = true)
         {

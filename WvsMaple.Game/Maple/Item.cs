@@ -218,6 +218,7 @@ namespace WvsGame.Maple
         {
             this.Assigned = true;
 
+            this.ID = reader.GetInt32("ID");
             this.MapleID = reader.GetInt32("MapleID");
             this.MaxPerStack = this.CachedReference.MaxPerStack;
             this.Quantity = reader.GetInt16("Quantity");
@@ -374,8 +375,14 @@ namespace WvsGame.Maple
 
                 GameServer.Database.RunQuery(query.ToString());
 
+                this.ID = GameServer.Database.GetLastInsertId();
                 this.Assigned = true;
             }
+        }
+
+        public void Delete()
+        {
+            GameServer.Database.Delete("items", "ID = '{0}'", this.ID);
         }
 
         public void Append(Packet p, bool zeroPosition = false, bool leaveOut = false, bool shortSlot = true)
