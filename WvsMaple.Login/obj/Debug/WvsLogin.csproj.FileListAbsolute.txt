@@ -1,0 +1,14 @@
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\bin\Debug\WvsLogin.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\bin\Debug\WvsLogin.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\obj\Debug\WvsLogin.csprojResolveAssemblyReference.cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\obj\Debug\WvsLogin.Properties.Resources.resources
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\obj\Debug\WvsLogin.csproj.GenerateResource.Cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\obj\Debug\WvsLogin.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\obj\Debug\WvsLogin.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\bin\Debug\Common.dll
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\bin\Debug\Mysql.Data.dll
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\bin\Debug\Common.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsLogin\obj\Debug\WvsLogin.MainForm.resources
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\Release\BinSvr\WvsLogin.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\Release\BinSvr\WvsLogin.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsLogin.exe.config

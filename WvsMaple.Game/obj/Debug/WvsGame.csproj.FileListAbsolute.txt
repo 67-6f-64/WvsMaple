@@ -1,0 +1,16 @@
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\bin\Debug\WvsGame.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\bin\Debug\WvsGame.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\bin\Debug\Common.dll
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\bin\Debug\Common.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\obj\Debug\WvsGame.csprojResolveAssemblyReference.cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\obj\Debug\WvsGame.Properties.Resources.resources
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\obj\Debug\WvsGame.csproj.GenerateResource.Cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\obj\Debug\WvsGame.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\obj\Debug\WvsGame.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsGame\bin\Debug\MySql.Data.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsGame\obj\Debug\WvsGame.MainForm.resources
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsGame.exe
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsGame.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\lz4_32.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\lz4_64.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsGame.exe.config

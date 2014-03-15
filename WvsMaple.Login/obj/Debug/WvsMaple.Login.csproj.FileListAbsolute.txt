@@ -1,0 +1,9 @@
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsLogin.exe.config
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsLogin.exe
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsLogin.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsMaple.Login.csprojResolveAssemblyReference.cache
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.MainForm.resources
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.Properties.Resources.resources
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsMaple.Login.csproj.GenerateResource.Cache
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.exe
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Login\obj\Debug\WvsLogin.pdb

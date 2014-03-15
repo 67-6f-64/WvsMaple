@@ -1,0 +1,24 @@
+#Property
+
+port = 8484
+adminPort = 8383
+dbCatalogGlobalAccount = GlobalAccount
+dbGlobalAccountSource = 127.0.0.1,7890
+
+PublicIP = mbt.hopto.org
+PrivateIP = 127.0.0.1
+
+logaccount = {
+	0 = 13
+	1 = 33
+}
+
+center = {
+	Scania = {
+		ip = 127.0.0.1
+		port = 8383
+		world = 0
+		channelNo = 3
+	}
+}
+

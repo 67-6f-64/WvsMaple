@@ -1,0 +1,8 @@
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsMaple.Administration.exe.config
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsMaple.Administration.exe
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsMaple.Administration.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Administration\obj\Debug\WvsMaple.Administration.Properties.Resources.resources
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Administration\obj\Debug\WvsMaple.Administration.csproj.GenerateResource.Cache
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Administration\obj\Debug\WvsMaple.Administration.exe
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Administration\obj\Debug\WvsMaple.Administration.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Administration\obj\Debug\WvsMaple.Administration.csprojResolveAssemblyReference.cache

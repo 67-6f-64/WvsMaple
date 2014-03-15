@@ -1,0 +1,6 @@
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Common\bin\Debug\Common.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Common\bin\Debug\Common.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Common\bin\Debug\Mysql.Data.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Common\obj\Debug\Common.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Common\obj\Debug\Common.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Common\obj\Debug\WvsMaple.Common.csprojResolveAssemblyReference.cache

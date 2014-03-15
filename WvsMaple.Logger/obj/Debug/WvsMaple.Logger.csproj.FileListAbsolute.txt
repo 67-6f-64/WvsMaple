@@ -1,0 +1,5 @@
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Logger\bin\Debug\WvsMaple.Logger.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Logger\bin\Debug\WvsMaple.Logger.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Logger\obj\Debug\WvsMaple.Logger.dll
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Logger\obj\Debug\WvsMaple.Logger.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Logger\obj\Debug\WvsMaple.Logger.csprojResolveAssemblyReference.cache

@@ -1,0 +1,7 @@
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsShop\bin\Debug\WvsShop.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsShop\bin\Debug\WvsShop.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsShop\obj\Debug\WvsShop.Properties.Resources.resources
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsShop\obj\Debug\WvsShop.csproj.GenerateResource.Cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsShop\obj\Debug\WvsShop.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsShop\obj\Debug\WvsShop.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsShop\obj\Debug\WvsShop.csprojResolveAssemblyReference.cache

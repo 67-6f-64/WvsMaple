@@ -1,0 +1,23 @@
+#Property
+
+port = 8787
+webPort = 8888
+
+gameWorldId = 0
+LimitGoodsFile = LimitGoods.img
+
+PublicIP = mbt.hopto.org
+PrivateIP = 127.0.0.1
+
+cashDaemon = {
+	CGS1 = {
+		ip = 203.238.156.131
+		port = 36091
+	}
+}
+
+center = {
+	ip = 127.0.0.1
+	port = 8383
+	worldName = Tespia
+}

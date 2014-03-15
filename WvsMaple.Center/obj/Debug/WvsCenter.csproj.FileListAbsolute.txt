@@ -1,0 +1,13 @@
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\bin\Debug\WvsCenter.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\bin\Debug\WvsCenter.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\obj\Debug\WvsCenter.Properties.Resources.resources
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\obj\Debug\WvsCenter.csproj.GenerateResource.Cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\obj\Debug\WvsCenter.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\obj\Debug\WvsCenter.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\obj\Debug\WvsCenter.csprojResolveAssemblyReference.cache
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\obj\Debug\WvsCenter.MainForm.resources
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\bin\Debug\Common.dll
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\WvsCenter\bin\Debug\Common.pdb
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\Release\BinSvr\WvsCenter.exe
+c:\users\gil\documents\visual studio 2013\Projects\WvsMaple\Release\BinSvr\WvsCenter.pdb
+C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsCenter.exe.config
