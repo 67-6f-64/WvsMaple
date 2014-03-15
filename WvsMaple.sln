@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WvsMaple.reNX", "..\..\..\ms-reNX-master\WvsMaple.reNX.csproj", "{0F5C5F44-238A-45F2-95AF-A1936949AEF2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WvsMaple.Center", "WvsMaple.Center\WvsMaple.Center.csproj", "{A94DA762-29B0-4EA8-98BD-CBADF00DFFCE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WvsMaple.Common", "WvsMaple.Common\WvsMaple.Common.csproj", "{ECC67604-A249-4C5F-87B8-1F2BF89FFC08}"
@@ -19,16 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WvsMaple.Logger", "WvsMaple
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WvsMaple.Administration", "WvsMaple.Administration\WvsMaple.Administration.csproj", "{4253EE38-9BA9-4DA8-B225-35E82316F3A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WvsMaple.reNX", "WvsMaple.reNX\WvsMaple.reNX.csproj", "{0F5C5F44-238A-45F2-95AF-A1936949AEF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A94DA762-29B0-4EA8-98BD-CBADF00DFFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A94DA762-29B0-4EA8-98BD-CBADF00DFFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A94DA762-29B0-4EA8-98BD-CBADF00DFFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{4253EE38-9BA9-4DA8-B225-35E82316F3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4253EE38-9BA9-4DA8-B225-35E82316F3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4253EE38-9BA9-4DA8-B225-35E82316F3A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F5C5F44-238A-45F2-95AF-A1936949AEF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

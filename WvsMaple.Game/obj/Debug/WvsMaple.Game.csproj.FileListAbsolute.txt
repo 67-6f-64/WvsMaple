@@ -9,3 +9,14 @@ C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Game\obj\De
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Game\obj\Debug\WvsMaple.Game.csproj.GenerateResource.Cache
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Game\obj\Debug\WvsGame.exe
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Game\obj\Debug\WvsGame.pdb
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Game\obj\Debug\WvsMaple.Game.csprojResolveAssemblyReference.cache
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Game\obj\Debug\WvsGame.MainForm.resources
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Game\obj\Debug\WvsGame.Properties.Resources.resources
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Game\obj\Debug\WvsMaple.Game.csproj.GenerateResource.Cache
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Game\obj\Debug\WvsGame.exe
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Game\obj\Debug\WvsGame.pdb
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\lz4_32.dll
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\lz4_64.dll
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\WvsGame.exe.config
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\WvsGame.exe
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\WvsGame.pdb

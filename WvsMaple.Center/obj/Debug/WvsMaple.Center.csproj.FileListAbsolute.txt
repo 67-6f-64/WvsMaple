@@ -7,3 +7,6 @@ C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\WvsMaple.Center\obj\
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsCenter.exe.config
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsCenter.exe
 C:\Users\Gil\Documents\Visual Studio 2013\Projects\WvsMaple\Release\BinSvr\WvsCenter.pdb
+C:\Users\Gil\Documents\GitHub\WvsMaple\Release\BinSvr\WvsCenter.exe.config
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Center\obj\Debug\WvsCenter.exe
+C:\Users\Gil\Documents\GitHub\WvsMaple\WvsMaple.Center\obj\Debug\WvsCenter.pdb

@@ -159,13 +159,13 @@
     <Folder Include="Maple\Social\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\ms-reNX-master\WvsMaple.reNX.csproj">
-      <Project>{0f5c5f44-238a-45f2-95af-a1936949aef2}</Project>
-      <Name>WvsMaple.reNX</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WvsMaple.Common\WvsMaple.Common.csproj">
       <Project>{ecc67604-a249-4c5f-87b8-1f2bf89ffc08}</Project>
       <Name>WvsMaple.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WvsMaple.reNX\WvsMaple.reNX.csproj">
+      <Project>{0f5c5f44-238a-45f2-95af-a1936949aef2}</Project>
+      <Name>WvsMaple.reNX</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
