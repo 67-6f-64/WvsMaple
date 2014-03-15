@@ -1,12 +1,11 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using WvsGame.Maple.Scripting;
 
 /*
  * Name: Shanks.
  * Map: Southperry (60000).
  * 
- * Purpose: Teleporation service for beginners to Lith Harbor.
- *          If player posses recommendation letter, no charge is required.
+ * Purpose: Paid teleportation service for beginners to Lith Harbor.
  * 
  * Author: Fraysa.
  */

@@ -280,6 +280,11 @@ namespace WvsGame.Maple.Scripting
 
         #region References
 
+        public string Bold(string text)
+        {
+            return "#e" + text + "#n";
+        }
+
         public string Blue(string text)
         {
             return "#b" + text + "#k";
